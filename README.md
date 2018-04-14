@@ -16,7 +16,7 @@ $ npm install --save pool-watch
 
 ## Description
 
-The `pool-watch` module has been written to monitor the distribution of the promise executions within a [promise pool](https://github.com/HQarroum/promise-pool) instance, by displaying a live chart of the state of the promise pool executors.
+The `pool-watch` module has been written to monitor the distribution of promise executions within a [promise pool](https://github.com/HQarroum/promise-pool) instance, by displaying a live chart of the state of the promise pool executors.
 
 ## Usage
 
@@ -50,18 +50,19 @@ const pool = new Pool(5);
 // The number of inserted promises.
 const total = 1000;
 
-// Configuring watch to display the live chart on `stdout`.
+// Configuring `watch` to display the live chart on `stdout`.
 watch(pool, { total }).pipe(process.stdout);
 
-// Scheduling 1000 promises in the pool.
+// Scheduling promises in the pool.
 for (let i = 0; i < total; ++i) {
   pool.schedule(() => new Promise((r) => setTimeout(r, 200)));
 }
 ```
 
-> More examples are available in the [exmaples](./examples) directory.
+> More examples are available in the [examples](./examples) directory.
 
 ## See also
 
  - The [Promise Pool module](https://github.com/HQarroum/promise-pool)
+ - [A promise pool watcher command-line application example](https://github.com/HQarroum/promise-pool/tree/master/examples/pool-monitoring)
  - The [`progress-string`](https://github.com/watson/progress-string) module
