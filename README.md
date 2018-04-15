@@ -1,10 +1,10 @@
 # pool-watch
-> A live chart renderer of the distribution of promises across a promise pool, as a stream.
+> A live chart renderer of the distribution of promises across a promise pool.
 
 [![Build Status](https://travis-ci.org/HQarroum/pool-watch.svg?branch=master)](https://travis-ci.org/HQarroum/middleware-chain)
 [![Code Climate](https://codeclimate.com/repos/55edafae69568006cf007c34/badges/cb599bae40767f430845/gpa.svg)](https://codeclimate.com/repos/55edafae69568006cf007c34/feed)
 
-Current version: **1.0.8**
+Current version: **1.0.0**
 
 Lead Maintainer: [Halim Qarroum](mailto:hqm.post@gmail.com)
 
@@ -18,17 +18,19 @@ $ npm install --save pool-watch
 
 The `pool-watch` module has been written to monitor the distribution of promise executions within a [promise pool](https://github.com/HQarroum/promise-pool) instance, by displaying a live chart of the state of the promise pool executors.
 
+> This module is only compatible with a [`promise-pool`](https://github.com/HQarroum/promise-pool), and will not work for other pool implementations.
+
 ## Usage
 
-To use `pool-watch`, simply require it into your application holding an existing promise pool instance.
+To use `pool-watch`, simply require it into your application.
 
 ```js
 const watch = require('pool-watch');
 ```
 
-The returned `watch` function takes as an input a reference to the promise pool, as well as an options object to pass to the [`progress-string`](https://github.com/watson/progress-string) module which is used to create the chart.
+The returned `watch` function takes as an input a reference to the promise pool, as well as an `options` object which will be forwarded to [`progress-string`](https://github.com/watson/progress-string) which is used to create the chart.
 
-The options you can pass to `watch` are the following :
+The options you can pass as a second argument to `watch` are the following :
 
 - `total` - (integer) The maximum amount of promises you would like to monitor (mandatory).
 - `width` - (integer, default: 42) The width of the progress bar in chars
@@ -38,16 +40,18 @@ The options you can pass to `watch` are the following :
   completed part of the progress bar
 - `style` - (function, optional) See `options.style` below for details
 
-> For more informations on the options object, see the [`progress-string`](https://github.com/watson/progress-string) module.
+> For more informations on the `options object`, see the [`progress-string`](https://github.com/watson/progress-string) module.
 
-The returned value of a call to the `watch` function is a Node.js stream, meaning that you can `.pipe()` the live chart to any writable stream (e.g `process.stdout`).
+### Return value
+
+The returned value of a call to the `watch` function is a Node.js [Stream](https://nodejs.org/api/stream.html), allowing you to `.pipe()` the live chart to any writable stream (e.g `process.stdout`, or a `net.Socket` for remote monitoring with `netcat`).
 
 ## Example
 
 ```js
 // Creating the promise pool with `5` executors.
 const pool = new Pool(5);
-// The number of inserted promises.
+// The number of promises we'll insert.
 const total = 1000;
 
 // Configuring `watch` to display the live chart on `stdout`.
