@@ -10,7 +10,7 @@ Lead Maintainer: [Halim Qarroum](mailto:hqm.post@gmail.com)
 
 <h1 align="center">
 	<br>
-	<a href="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ"><img width="900"  src="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png" alt="chart"></a>
+	<a href="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ"><img src="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png" alt="chart"></a>
 	<br>
 </h1>
 
@@ -68,10 +68,6 @@ for (let i = 0; i < total; ++i) {
   pool.schedule(() => new Promise((r) => setTimeout(r, 200)));
 }
 ```
-
-Below is an `asciinema` built with a command-line application making use of `pool-watch`.
-
-[![asciicast](https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png)](https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ)
 
 > More examples are available in the [examples](./examples) directory.
 
