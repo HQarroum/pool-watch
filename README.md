@@ -1,15 +1,5 @@
 <h1 align="center">
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<img src="https://cdn.dribbble.com/users/210606/screenshots/1420523/loading-gif.gif" alt="chart">
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 </h1>
 
 # pool-watch
