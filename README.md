@@ -4,7 +4,7 @@
 	<br>
 	<br>
 	<br>
-	<img width="600" src="https://cdn.dribbble.com/users/210606/screenshots/1420523/loading-gif.gif" alt="chart">
+	<img src="https://cdn.dribbble.com/users/210606/screenshots/1420523/loading-gif.gif" alt="chart">
 	<br>
 	<br>
 	<br>
