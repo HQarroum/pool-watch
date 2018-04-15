@@ -1,14 +1,14 @@
-<h1 align="center">
-	<br>
-	<a href="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ"><img width="700"  src="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png" alt="chart"></a>
-	<br>
-</h1>
-
 # pool-watch
 > A live chart renderer of the distribution of promises across a promise pool.
 
 [![Build Status](https://travis-ci.org/HQarroum/pool-watch.svg?branch=master)](https://travis-ci.org/HQarroum/middleware-chain)
 [![CodeFactor](https://www.codefactor.io/repository/github/hqarroum/pool-watch/badge)](https://www.codefactor.io/repository/github/hqarroum/pool-watch)
+
+<h1 align="center">
+	<br>
+	<a href="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ"><img width="700"  src="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png" alt="chart"></a>
+	<br>
+</h1>
 
 Current version: **1.0.0**
 
