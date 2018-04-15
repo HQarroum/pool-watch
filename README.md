@@ -1,5 +1,3 @@
-[![asciicast](https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png)](https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ)
-
 # pool-watch
 > A live chart renderer of the distribution of promises across a promise pool, as a stream.
 
@@ -60,6 +58,10 @@ for (let i = 0; i < total; ++i) {
   pool.schedule(() => new Promise((r) => setTimeout(r, 200)));
 }
 ```
+
+Below is an `asciinema` built with a command-line application making use of `pool-watch`.
+
+[![asciicast](https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png)](https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ)
 
 > More examples are available in the [examples](./examples) directory.
 
