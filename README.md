@@ -1,6 +1,8 @@
 [![asciicast](https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png)](https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ)
 
 # pool-watch
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/HQarroum/pool-watch.svg?token=f0a4911efe2016dad24dd65db5a32eef5f948e566e910298d640d9fed69c0238&ts=1523759417169)](https://greenkeeper.io/)
 > A live chart renderer of the distribution of promises across a promise pool, as a stream.
 
 [![Build Status](https://travis-ci.org/HQarroum/pool-watch.svg?branch=master)](https://travis-ci.org/HQarroum/middleware-chain)
