@@ -1,5 +1,7 @@
 <h1 align="center">
-	<img src="https://cdn.dribbble.com/users/210606/screenshots/1420523/loading-gif.gif" alt="chart">
+	<br>
+	<a href="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ"><img src="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png" alt="chart"></a>
+	<br>
 </h1>
 
 # pool-watch
