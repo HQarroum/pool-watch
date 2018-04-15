@@ -1,6 +1,6 @@
 <h1 align="center">
 	<br>
-	<a href="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ"><img width="300"  src="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png" alt="chart"></a>
+	<a href="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ"><img width="700"  src="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png" alt="chart"></a>
 	<br>
 </h1>
 
