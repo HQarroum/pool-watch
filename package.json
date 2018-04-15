@@ -1,0 +1,20 @@
+{
+  "name": "pool-watch",
+  "version": "1.0.0",
+  "description": "A live chart of the distribution of promises across a promise pool, as a stream.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "promise",
+    "pool",
+    "monitoring"
+  ],
+  "author": "Halim Qarroum <hqm.post@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ansi-diff-stream": "^1.2.1",
+    "progress-string": "^1.2.2"
+  }
+}
