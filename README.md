@@ -10,7 +10,7 @@ Lead Maintainer: [Halim Qarroum](mailto:hqm.post@gmail.com)
 
 <h1 align="center">
 	<br>
-	<a href="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ"><img src="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png" alt="chart"></a>
+<a href="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ" target="_blank"><img src="https://asciinema.org/a/YrNLcfAkFueFr0TLqhGXHgAFJ.png" /></a>
 	<br>
 </h1>
 
