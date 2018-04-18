@@ -2,24 +2,19 @@ const progress = require('progress-string');
 const diff     = require('ansi-diff-stream');
 
 /**
- * Refreshes the progress bars according to the
- * number of promises being executed in the pool.
- */
-const refresh = (bars, size, out) => {
-  let string = 'Balance of promises between executors:';
-  for (let i = 0; i < size; ++i) {
-    string += `\n${bars[i].progress(bars[i].count)} ${bars[i].count}`;
-  }
-  out.write(string);
-};
-
-/**
  * Called back when promises are enqueued or have been
  * executed on the pool.
  */
-const hook = (type, bars, size, out) => (idx) => {
-  bars[idx].count = type === 'after' ? bars[idx].count - 1 : bars[idx].count + 1;
-  refresh(bars, size, out);
+const hook = (type, opts, bars, pool, out) => (e) => {
+  let string = 'Balance of promises between executors:';
+  const array = pool.promises();
+  for (let i = 0; i < array.length; ++i) {
+    if (!array[i].progress) {
+      array[i].progress = progress(opts);
+    }
+    string += `\n${array[i].progress(array[i].load)} ${array[i].load}`;
+  }
+  out.write(string);
 };
 
 module.exports = (pool, opts) => {
@@ -30,19 +25,19 @@ module.exports = (pool, opts) => {
   if (typeof pool !== 'object') {
     throw new Error('An instance to a promise pool is required');
   }
-  
+
   // Initializing the progress bars.
-  for (let i = 0; i < pool.opts.size; ++i) {
-    bars[i] = { count: 0 };
-    bars[i].progress = progress(opts);
+  const array = pool.promises();
+  for (let i = 0; i < array.length; ++i) {
+    bars.push({ count: array[i].load, progress: progress(opts), idx: array[i].idx });
   }
 
   // Subscribing to lifecycle events on the pool.
-  const before = hook('before', bars, pool.opts.size, out);
-  const after  = hook('after', bars, pool.opts.size, out);
-  pool.beforeEnqueueEach(before).afterEach(after);
+  const before = hook('before', opts, bars, pool, out);
+  const after  = hook('after', opts, bars, pool, out);
+  pool.on('before.enqueue.each', before).on('after.each', after);
   
   // Allowing to stop the exection.
-  out.detach = () => pool.removeBeforeEnqueueEach(before).removeAfterEach(after);
+  out.detach = () => pool.removeListener('before.enqueue.each', before).removeListener('after.each', after);
   return (out);
 };
