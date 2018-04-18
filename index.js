@@ -5,7 +5,7 @@ const diff     = require('ansi-diff-stream');
  * Called back when promises are enqueued or have been
  * executed on the pool.
  */
-const hook = (opts, pool, out) => (e) => {
+const hook = (opts, pool, out) => () => {
   let string = 'Balance of promises between executors:';
   const array = pool.promises();
   for (let i = 0; i < array.length; ++i) {
