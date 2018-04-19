@@ -1,7 +1,7 @@
 {
   "name": "pool-watch",
-  "version": "1.0.0",
-  "description": "A live chart of the distribution of promises across a promise pool, as a stream.",
+  "version": "1.0.1",
+  "description": "A live chart of the distribution of promises across a promise pool.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

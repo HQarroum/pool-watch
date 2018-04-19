@@ -3,7 +3,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/hqarroum/pool-watch/badge)](https://www.codefactor.io/repository/github/hqarroum/pool-watch)
 
-Current version: **1.0.0**
+Current version: **1.0.1**
 
 Lead Maintainer: [Halim Qarroum](mailto:hqm.post@gmail.com)
 
