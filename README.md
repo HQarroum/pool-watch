@@ -1,7 +1,6 @@
 # pool-watch
 > A live chart renderer of the distribution of promises across a promise pool.
 
-[![Build Status](https://travis-ci.org/HQarroum/pool-watch.svg?branch=master)](https://travis-ci.org/HQarroum/middleware-chain)
 [![CodeFactor](https://www.codefactor.io/repository/github/hqarroum/pool-watch/badge)](https://www.codefactor.io/repository/github/hqarroum/pool-watch)
 
 Current version: **1.0.0**
