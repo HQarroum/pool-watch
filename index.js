@@ -18,7 +18,7 @@ const hook = (opts, pool, out) => () => {
 };
 
 module.exports = (pool, opts) => {
-  const out  = diff();
+  const out = diff();
 
   opts.total = +opts.total / (pool.opts.size > 1 ? pool.opts.size - 1 : 1);
   if (typeof pool !== 'object') {

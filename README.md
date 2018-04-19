@@ -69,8 +69,6 @@ for (let i = 0; i < total; ++i) {
 }
 ```
 
-> More examples are available in the [examples](./examples) directory.
-
 ## See also
 
  - The [Promise Pool module](https://github.com/HQarroum/promise-pool)
